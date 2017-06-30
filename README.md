@@ -11,15 +11,16 @@ Untuk melindungi server dari SSH Brute Force Login.
 
 ## Constants :
 `MAX_FAILED` Jumlah maksimal login gagal.
+
 `FAIL2BAN_DATA` Penyimpanan logs dan banned list.
 
 
 ## Installation
-1. ```shell composer install ```
-2. Login sebagai root ```shell sudo -i ```
-3. Jalankan ```shell crontab -e ```
-4. Tambahkan ```shell * * * * * php fail2ban.php ```
-5. Simpan
+1. Jalankan ```composer install ```.
+2. Login sebagai root ```sudo -i```.
+3. Jalankan ```crontab -e ```.
+4. Tambahkan ```* * * * * php fail2ban.php ``` diakhir file.
+5. Simpan.
 
 
 ## How it works?
