@@ -9,10 +9,17 @@ namespace Fail2Ban;
  * @license MIT
  */
 
+use Fail2Ban\AuthLogReader;
+use Fail2Ban\ParseUserLogin;
+
 final class Core
-{
+{	
+	/**
+	 * Here we go.
+	 */
 	public static function run()
 	{
-
+		$a = new AuthLogReader(__DIR__ . "/../../a.tmp");
+		var_dump($a);
 	}
 }

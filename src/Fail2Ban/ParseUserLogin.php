@@ -22,7 +22,7 @@ final class ParseUserLogin
 	 */
 	public function __construct($log_content)
 	{
-		$this->log_content = $log_content;
+		$this->log_content = (string) $log_content;
 	}
 
 	/**
@@ -30,6 +30,6 @@ final class ParseUserLogin
 	 */
 	public function getLoginEvent()
 	{
-		
+
 	}
 }
