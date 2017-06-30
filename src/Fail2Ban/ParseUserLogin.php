@@ -60,7 +60,6 @@ final class ParseUserLogin
 				}
 			}
 		}
-		var_dump($rt);die;
-		return $a;
+		return $rt;
 	}
 }
