@@ -15,12 +15,10 @@ Untuk melindungi server dari SSH Brute Force Login.
 
 
 ## Installation
-1. ```shell
-composer install
-```
-2. Login sebagai root ```sudo -i```
-3. Jalankan ```crontab -e```
-4. Tambahkan ```* * * * * php fail2ban.php```
+1. ```shell composer install ```
+2. Login sebagai root ```shell sudo -i ```
+3. Jalankan ```shell crontab -e ```
+4. Tambahkan ```shell * * * * * php fail2ban.php ```
 5. Simpan
 
 
