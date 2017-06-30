@@ -39,10 +39,6 @@ final class ParseUserLogin
 				$qq = explode(" ",$b[0],-1);
 				$mn = (string) array_search($qq[0], $mr);
 				$date = date("Y")."-".(strlen($mn) == 1 ? "0".$mn : $mnl)."-".$qq[1]." ".$qq[2];
-				var_dump($date);
-				die;
-
-
 				if (strpos($b[1], "Failed password for ")!==false) {
 					$b = explode("Failed password for ", $b[1], 2);
 					if (strpos($b[1], "invalid user")!==false) {
