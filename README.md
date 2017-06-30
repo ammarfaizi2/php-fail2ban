@@ -1,4 +1,4 @@
-PHP Fail2Ban
+### PHP Fail2Ban
 
 ### Under attack?
 PHP Fail2Ban is your solution.
