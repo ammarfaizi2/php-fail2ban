@@ -52,11 +52,11 @@ final class ParseUserLogin
 						$b = explode(" ", $b[1]);
 					}
 					$rt['login_failed'][sha1(json_encode($b))][] = array(
-											"ip"	=> trim($b[2]),
-											"time" 	=> $date,
-											"user"	=> trim($b[0]),
-											"port" 	=> trim($b[4]),
-										);
+						"ip"	=> trim($b[2]),
+						"time" 	=> $date,
+						"user"	=> trim($b[0]),
+						"port" 	=> trim($b[4]),
+					);
 				}
 			}
 		}
