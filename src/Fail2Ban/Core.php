@@ -58,7 +58,7 @@ final class Core
                 foreach ($new_banned_list as $val) {
                     $banned_string.="ALL: ".$val."\n";
                 }
-                file_put_contents("/etc/hosts.deny", $banned_string, FILE_APPEND | LOCK_EX);
+                file_put_contents("/etc/hosts.deny", ltrim($banned_string,"\n"), FILE_APPEND | LOCK_EX);
                 exec("service sshd restart && service ssh restart");
             }
         }
