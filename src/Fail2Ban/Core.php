@@ -22,7 +22,7 @@ final class Core
 	public static function run()
 	{
 		is_dir(FAIL2BAN_DATA) or mkdir(FAIL2BAN_DATA);
-		$a = new ParseUserLogin(new AuthLogReader(__DIR__ . "/../../a.tmp"));
+		$a = new ParseUserLogin(new AuthLogReader());
 		$login_event = $a->getLoginEvent();
 		if (isset($login_event['login_failed'])) {
 			if (file_exists(FAIL2BAN_DATA."/login_failed.log")) {
