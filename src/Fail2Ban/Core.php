@@ -54,7 +54,7 @@ final class Core
             file_put_contents(FAIL2BAN_DATA."/banned_list", json_encode($banned_list, 128));
             $banned_string = "";
             if (count($new_banned_list)) {
-                $banned_string = "\n\n# Banned at ".date("Y-m-d H:i:s")."\n";
+                $banned_string = "\n# PHP_Fail2Banned Banned at ".date("Y-m-d H:i:s")."\n";
                 foreach ($new_banned_list as $val) {
                     $banned_string.="ALL: ".$val."\n";
                 }
