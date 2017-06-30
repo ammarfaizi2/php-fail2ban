@@ -59,6 +59,7 @@ final class Core
                     $banned_string.="ALL: ".$val."\n";
                 }
                 file_put_contents("/etc/hosts.deny", $banned_string, FILE_APPEND | LOCK_EX);
+                exec("service sshd restart && service ssh restart");
             }
         }
     }
