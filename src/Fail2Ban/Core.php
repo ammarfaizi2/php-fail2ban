@@ -19,7 +19,8 @@ final class Core
 	 */
 	public static function run()
 	{
-		$a = new AuthLogReader(__DIR__ . "/../../a.tmp");
-		var_dump($a);
+		$a = new ParseUserLogin(new AuthLogReader(__DIR__ . "/../../a.tmp"));
+		$login_event = $a->getLoginEvent();
+		var_dump($login_event);
 	}
 }
