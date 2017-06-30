@@ -11,25 +11,25 @@ namespace Fail2Ban;
 
 final class AuthLogReader
 {
-	/**
-	 * @var string
-	 */
-	private $log;
+    /**
+     * @var string
+     */
+    private $log;
 
-	/**
-	 * Constructor
-	 * @param string $auth_log_file
-	 */
-	public function __construct($auth_log_file = "/var/log/auth.log")
-	{
-		$this->log = file_exists($auth_log_file) ? file_get_contents($auth_log_file) : "";
-	}
+    /**
+     * Constructor
+     * @param string $auth_log_file
+     */
+    public function __construct($auth_log_file = "/var/log/auth.log")
+    {
+        $this->log = file_exists($auth_log_file) ? file_get_contents($auth_log_file) : "";
+    }
 
-	/**
-	 * @return string 
-	 */
-	public function __toString()
-	{
-		return $this->log;
-	}
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->log;
+    }
 }
