@@ -12,6 +12,8 @@ namespace Fail2Ban;
 use Fail2Ban\AuthLogReader;
 use Fail2Ban\ParseUserLogin;
 
+defined("FAIL2BAN_DATA") or die("FAIL2BAN_DATA not defined !");
+
 final class Core
 {	
 	/**

@@ -30,13 +30,18 @@ final class ParseUserLogin
 	 */
 	public function getLoginEvent()
 	{
+		$mr = array(1=>"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
 		$a = explode("\n", $this->log_content);
 		for ($i=0; $i < count($a); $i++) { 
 			$b = explode("sshd[", $a[$i], 2);
 			if (isset($b[1])) {
 				// get time
 				$qq = explode(" ",$b[0],-1);
-				$time = implode(" ", array($qq[0], $qq[1], $qq[2]));
+				$mn = (string) array_search($qq[0], $mr);
+				$date = date("Y")."-".(strlen($mn) == 1 ? "0".$mn : $mnl)."-".$qq[1]." ".$qq[2];
+				var_dump($date);
+				die;
+
 
 				if (strpos($b[1], "Failed password for ")!==false) {
 					$b = explode("Failed password for ", $b[1], 2);
