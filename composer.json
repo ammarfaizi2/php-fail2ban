@@ -1,12 +1,10 @@
 {
-    "name": "root/php_fail2ban",
     "authors": [
         {
             "name": "Ammar Faizi",
             "email": "ammarfaizi2@gmail.com"
         }
     ],
-    "require": {},
     "autoload": {
     	"psr-0": {
     		"Fail2Ban": "src/"
