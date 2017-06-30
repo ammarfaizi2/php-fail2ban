@@ -16,8 +16,20 @@ final class ParseUserLogin
 	 */
 	private $log_content;
 
+	/**
+	 * Constructor.
+	 * @param string $log_content
+	 */
 	public function __construct($log_content)
 	{
 		$this->log_content = $log_content;
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getLoginEvent()
+	{
+		
 	}
 }
